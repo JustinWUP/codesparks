@@ -3,8 +3,7 @@ citemplate
 
 My personal codeigniter template.
 
-Other stuff to setup:
-=====================
+## Other stuff to setup:
 
 1. Edit your /etc/hosts file
 
@@ -12,11 +11,14 @@ Other stuff to setup:
 
 2. Edit your Apache root .htaccess to read this way
 
-    # for http://www.YOURDEVSITE.com
     RewriteEngine On
-    RewriteCond %{HTTP_HOST} ^(www\.)?yoursite\.com$ [NC]
+    
+    RewriteCond %{HTTP_HOST} ^(www\.)?YOURDEVSITE\.com$ [NC]
+    
     RewriteCond %{REQUEST_URI} !^/~USERNAME/PATHTOYOURDEVSITE
+    
     RewriteRule ^(.*)$ /~USERNAME/PATHTOYOURDEVSITE/$1 [L]
+    
 
 3. Add this to your /private/etc/apache2/extra/httpd-vhosts.conf
 
