@@ -36,5 +36,5 @@ The J.Bean personal codeigniter template.
 
 4. Restart Apache
 
-    #$>>> sudo apachectl restart
+    $>>> sudo apachectl restart
 
