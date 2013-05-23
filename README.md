@@ -1,9 +1,10 @@
 citemplate
 ==========
 
-My personal codeigniter template.
+The J.Bean personal codeigniter template.
 
 ## Other stuff to setup:
+(View this file in a text editor to see the code examples formatted properly.)
 
 1. Edit your /etc/hosts file
 
@@ -35,5 +36,5 @@ My personal codeigniter template.
 
 4. Restart Apache
 
-    $>>> sudo apachectl restart
+    #$>>> sudo apachectl restart
 
