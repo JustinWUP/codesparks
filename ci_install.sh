@@ -51,4 +51,6 @@ sudo -- sh -c "echo     \</VirtualHost\> >> /private/etc/apache2/extra/httpd-vho
 
 sudo apachectl restart
 
+open http://$argument2.spark
+
 ###END SCRIPT###
