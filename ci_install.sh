@@ -74,8 +74,6 @@ case "${slots[@]}" in  *"compass"*)
   	sudo -- sh -c "echo output_style = :expanded >> ~/Sites/$argument1/config.rb"
   	sudo -- sh -c "echo relative_assets = true >> ~/Sites/$argument1/config.rb" ;; esac
 
-case "${slots[@]}" in  *"compass"*)
-
 echo 'You sparked it.'
 
 open http://$argument2.spark
