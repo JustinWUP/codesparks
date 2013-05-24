@@ -11,7 +11,7 @@ Run this at your terminal (where test is the folder to install to and testsite i
 ## TO INSTALL WITH COMPASS (SASS)
 Run this at your terminal (where test is the folder to install to and testsite is the domain)
 
-    curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s test testsite (compass)
+    curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s test testsite compass
 
 Your site will be at ~/Sites/test and online at testsite.spark
 
