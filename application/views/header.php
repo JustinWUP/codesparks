@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/assets/css/style.css"> 
 	<link rel="stylesheet" href="/assets/css/fonts.css"> 
 	<script src="/assets/js/script.js"></script>
-	<title>New Codeigniter site</title>
+	<title>New CodeSpark</title>
 </head>
 <body>
 <div id="container">
