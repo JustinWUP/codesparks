@@ -5,9 +5,9 @@
 #!/bin/bash
 
 echo -n "What should your folder be called?"
-read argument1
+read ARGUMENT1
 echo -n "What should your domain be called?"
-read argument2
+read ARGUMENT2
 
 argument3=$(whoami)
 escapestring=(echo '$1')
