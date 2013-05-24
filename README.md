@@ -1,40 +1,13 @@
-citemplate
+CodeSparks
 ==========
 
-The J.Bean personal codeigniter template.
+CodeSparks is the offical J.Bean personal CodeIgniter template.
 
-## Other stuff to setup:
-(View this file in a text editor to see the code examples formatted properly.)
+## TO INSTALL 
+Run this at your terminal (where test is the folder to install to and testsite is the domain)
+    curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s test testsite
 
-1. Edit your /etc/hosts file
+Your site will be at ~/Sites/test and online at testsite.spark
 
-    127.0.0.1 www.YOURDEVSITE.com
-
-2. Edit your Apache root .htaccess to read this way
-
-    RewriteEngine On
-    
-    RewriteCond %{HTTP_HOST} ^(www\.)?YOURDEVSITE\.com$ [NC]
-    
-    RewriteCond %{REQUEST_URI} !^/~USERNAME/PATHTOYOURDEVSITE
-    
-    RewriteRule ^(.*)$ /~USERNAME/PATHTOYOURDEVSITE/$1 [L]
-    
-
-3. Add this to your /private/etc/apache2/extra/httpd-vhosts.conf
-
-    <VirtualHost *:80>
-        ServerName YOURDEVSITE.com
-        DocumentRoot /Users/USERNAME/Sites/PATHTOYOURDEVSITE
-        <Directory /Users/USERNAME/Sites/PATHTOYOURDEVSITE>
-            AllowOverride All
-            Options +FollowSymLinks
-            Order allow,deny
-            Allow from All
-		</Directory>
-    </VirtualHost>
-
-4. Restart Apache
-
-    $>>> sudo apachectl restart
-
+## NOTES
+This assumes you have Apache set up and Vhosts on.
