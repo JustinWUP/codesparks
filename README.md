@@ -1,7 +1,7 @@
 CodeSparks
 ==========
 
-CodeSparks is the offical J.Bean personal CodeIgniter template.
+CodeSparks is the official J.Bean personal CodeIgniter template.
 
 ## TO INSTALL 
 Run this at your terminal (where test is the folder to install to and testsite is the domain)
