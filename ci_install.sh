@@ -4,8 +4,11 @@
 
 #!/bin/bash
 
-argument1=$1  ###This is your incoming argument.
-argument2=$2
+echo -n "What should your folder be called?"
+read argument1
+echo -n "What should your domain be called?"
+read argument2
+
 argument3=$(whoami)
 escapestring=(echo '$1')
 
