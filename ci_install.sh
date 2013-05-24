@@ -74,7 +74,15 @@ case "${slots[@]}" in  *"compass"*)
   	sudo -- sh -c "echo output_style = :expanded >> ~/Sites/$argument1/config.rb"
   	sudo -- sh -c "echo relative_assets = true >> ~/Sites/$argument1/config.rb" ;; esac
 
-echo 'You sparked it.'
+echo " (                                                           "
+echo " )\ )                      )          )        (             "
+echo "(()/(           )  (    ( /(   (   ( /(      ( )\  (         "
+echo " /(_))\`  )   ( /(  )(   )\())  )\  )\())     )((_) )(    (   "
+echo "(_))  /(/(   )(_))(()\ ((_)\  ((_)(_))/     ((_)_ (()\   )\  "
+echo "/ __|((_)_\ ((_)_  ((_)| |(_)  (_)| |_   )   | _ ) ((_) ((_) "
+echo "\__ \| '_ \)/ _\` || '_|| / /   | ||  _| /(   | _ \| '_|/ _ \ "
+echo "|___/| .__/ \__,_||_|  |_\_\   |_| \__|(_))  |___/|_|  \___/ "
+echo "     |_|                                                     "
 
 open http://$argument2.spark
 
