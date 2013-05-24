@@ -15,7 +15,7 @@ echo 'Getting Sparks...'
 mkdir ~/Sites/$argument1 ###This is your command using the argument.
 git clone https://github.com/JustinWUP/citemplate.git  ~/Sites/$argument1 
 
-echo 'Modifying your hosts file for our project...'
+echo 'Modifying your hosts file for your project...'
 sudo -- sh -c "echo  >> /etc/hosts"
 sudo -- sh -c "echo 127.0.0.1 $argument2.spark >> /etc/hosts"
 sudo -- sh -c "echo 127.0.0.1 www.$argument2.spark >> /etc/hosts"
