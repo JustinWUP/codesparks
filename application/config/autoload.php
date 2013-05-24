@@ -64,7 +64,7 @@ $autoload['libraries'] = array('database');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'jbean');
+$autoload['helper'] = array('url', 'sparks');
 
 
 /*

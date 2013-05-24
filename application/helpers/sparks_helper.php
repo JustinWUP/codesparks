@@ -14,7 +14,7 @@ if ( ! function_exists('image_url'))
 	function image_url($data)
 	{
 		$CI =& get_instance();
-		return $CI->config->slash_item('base_url') . 'assets/images/' . $data;
+		echo $CI->config->slash_item('base_url') . 'assets/images/' . $data;
 	}
 }
 
@@ -33,7 +33,7 @@ if ( ! function_exists('script_url'))
 	function script_url($data)
 	{
 		$CI =& get_instance();
-		return $CI->config->slash_item('base_url') . 'assets/js/' . $data;
+		echo $CI->config->slash_item('base_url') . 'assets/js/' . $data;
 	}
 }
 
@@ -52,6 +52,6 @@ if ( ! function_exists('css_url'))
 	function css_url($data)
 	{
 		$CI =& get_instance();
-		return $CI->config->slash_item('base_url') . 'assets/css/' . $data;
+		echo $CI->config->slash_item('base_url') . 'assets/css/' . $data;
 	}
 }
