@@ -84,6 +84,7 @@ echo "\__ \| '_ \)/ _\` || '_|| / /   | ||  _| /(   | _ \| '_|/ _ \ "
 echo "|___/| .__/ \__,_||_|  |_\_\   |_| \__|(_))  |___/|_|  \___/ "
 echo "     |_|                                                     "
 
+rm -rf ~/Sites/$argument1/.git
 open http://$argument2.spark
 
 ###END SCRIPT###
