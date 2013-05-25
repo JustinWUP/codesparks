@@ -216,7 +216,7 @@ if ( ! function_exists('view'))
 		if($arguments['controller']==null){
 			$arguments['controller'] = $CI->router->fetch_class(); 
 		}
-		$arguments['view']='index';
+		
 		echo $CI->load->view($arguments['controller'].'/'.$arguments['view'], $arguments['data']);
 	}
 }
