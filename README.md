@@ -9,6 +9,7 @@ It features:
 * Neat template features like assets folders and headers/footers
 * Some helper functions I use
 * Environment configurability
+* Automated Apache set up
 * Ability to select mixins that you might find useful
 
 Coming maybe:
