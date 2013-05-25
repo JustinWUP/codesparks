@@ -23,7 +23,7 @@ Run this at your terminal (where testsite is the folder to install the domain)
 
     curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite
 
-Your site will be at ~/Sites/testsitegit and online at testsite.spark
+Your site will be at ~/Sites/testsite and online at testsite.spark
 
 
 ### To install with mixins
