@@ -21,9 +21,11 @@ So far, I have Compass (SASS) and Doctrine (ORM) but please suggest other things
 
 Enter mixin name lowercase in the curl script
 i.e.
+
     curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite compass
 
 or
+
     curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite compass,doctrine
 
 ## DEPENDENCIES
