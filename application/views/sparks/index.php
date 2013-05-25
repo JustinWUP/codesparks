@@ -8,5 +8,5 @@
 		(get info on those in helpers/sparks_helper.php.</li>
 	<li>There are header and footer partials pre-installed that have all the extraneous stuff I use for those things
 		are included to reduce clutter in views.</li>
-	<li>Your header, footer and other partials get loaded into views by the decidedly more consise function
-		partial('partialname'); </li>
+	<li>Your header, footer and other partials get loaded into views by the decidedly more concise function
+		<pre>partial('partialname');</pre> </li>
