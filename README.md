@@ -1,7 +1,20 @@
-CodeSparks
+CodeSparks 
 ==========
+#### by J.Bean
 
-CodeSparks is the official J.Bean personal CodeIgniter template.
+## Whazat?
+CodeSparks is the fastest way I can think of to setup a working CodeIgniter environment.
+
+It features:
+* Neat template features like assets folders and headers/footers
+* Some helper functions I use
+* Environment configurability
+* Ability to select mixins that you might find useful
+
+Coming maybe:
+* Scaffolding
+* More mixins (gimme ideas)
+
 ## INSTALLATION
 
 ### To install vanilla Sparks
