@@ -8,12 +8,23 @@ Run this at your terminal (where testsite is the folder to install the domain)
 
     curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite
 
-## TO INSTALL WITH COMPASS (SASS)
-Run this at your terminal (where testsite is the folder to install the domain)
+Your site will be at ~/Sites/testsitegit and online at testsite.spark
 
+
+## TO INSTALL WITH MIXINS
+After the testsite parameter, add mixin names with comma separated values.
+
+    curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite mixin1,mixin2
+
+## AVAILABLE MIXINS
+So far, I have Compass (SASS) and Doctrine (ORM) but please suggest other things that are valuable that you want to use.
+
+Enter mixin name lowercase in the curl script
+i.e.
     curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite compass
 
-Your site will be at ~/Sites/testsitegit and online at testsite.spark
+or
+    curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite compass,doctrine
 
 ## DEPENDENCIES
 * Unix based OS or dev environment (Mac, Linux, CYGWIN) 
