@@ -37,6 +37,7 @@ sudo -- sh -c "echo     RewriteCond %{REQUEST_FILENAME} !-f >> ~/Sites/$argument
 sudo -- sh -c "echo     RewriteCond %{REQUEST_FILENAME} !-d >> ~/Sites/$argument1/.htaccess"
 sudo -- sh -c "echo     RewriteRule ^/\(.*\)$ /index.php/$1 [L] >> ~/Sites/$argument1/.htaccess"
 sudo -- sh -c "echo \</IfModule\>  >> ~/Sites/$argument1/.htaccess"
+cat ~/Sites/$argument1/mod.txt >> .htaccess
 rm ~/Sites/$argument1/ci_install.sh
 
 #escape these arrow brackets
