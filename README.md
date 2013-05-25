@@ -49,7 +49,7 @@ Please suggest other things that are valuable that you want to use.
 
 ### Dependencies
 * Unix based OS or dev environment (Mac, Linux, CYGWIN) 
-* wget, curl (obviously), perl
+* wget, curl (obviously), perl, tar
 * Apache and Virtual Hosts turned on (Here's a decent article if you don't know how to do that - http://bit.ly/173lfH8)
 * PHP and MySQL (unless you favor another DB)
 * Ruby/Rubygems (for Compass)
