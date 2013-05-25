@@ -76,6 +76,16 @@ case "${slots[@]}" in  *"compass"*)
   	sudo -- sh -c "echo output_style = :expanded >> ~/Sites/$argument1/config.rb"
   	sudo -- sh -c "echo relative_assets = true >> ~/Sites/$argument1/config.rb" ;; esac
 
+case "${slots[@]}" in  *"doctrine"*)
+	echo 'Installing Doctrine ORM...'
+	mkdir ~/Sites/$argument1/tmp
+	wget http://www.doctrine-project.org/downloads/DoctrineORM-2.2.1-full.tar.gz -P ~/Sites/$argument1/tmp
+	mv ~/Sites/$argument1/DoctrineORM-2.2.1/Doctrine ~/Sites/$argument1/application/libraries
+	rm ~/Sites/$argument1/tmp
+	perl -pi -e "s/$autoload['libraries'] = array('database');/$autoload['libraries'] = array('database', 'doctrine');/g" ~/Sites/$argument1/application/config/autoload.php
+	wget http://www.joelverhagen.com/attachments/blog/2011/05/setting-up-codeigniter-2-with-doctrine-2-the-right-way/Doctrine.php -P ~/Sites/$argument1/application/libraries
+	;; esac
+
 echo " (                                                           "
 echo " )\ )                      )          )        (             "
 echo "(()/(           )  (    ( /(   (   ( /(      ( )\  (         "
