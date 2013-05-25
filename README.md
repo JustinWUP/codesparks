@@ -23,12 +23,13 @@ or
 
     curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite compass,doctrine
 
+Mixins installers will download/setup everything you need for those particular tools via the curl script.
 
 ### Available mixins
 So far, I have:
 
-* Compass (SASS)
-* Doctrine (ORM) 
+* Compass (SASS compiler)
+* Doctrine (a better ORM) 
 
 Please suggest other things that are valuable that you want to use.
 
