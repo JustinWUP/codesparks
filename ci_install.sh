@@ -9,6 +9,7 @@ argument1=$1  ###This is your incoming argument.
 argument2=$(whoami)
 slots=$2
 escapestring=(echo '$1')
+indextext=""
 
 echo 'Getting Sparks...'
 mkdir ~/Sites/$argument1 ###This is your command using the argument.
@@ -74,7 +75,9 @@ case "${slots[@]}" in  *"compass"*)
   	sudo -- sh -c "echo http_images_path = \'assets/images\' >> ~/Sites/$argument1/config.rb"
   	sudo -- sh -c "echo environment = :development >> ~/Sites/$argument1/config.rb"
   	sudo -- sh -c "echo output_style = :expanded >> ~/Sites/$argument1/config.rb"
-  	sudo -- sh -c "echo relative_assets = true >> ~/Sites/$argument1/config.rb" ;; esac
+  	sudo -- sh -c "echo relative_assets = true >> ~/Sites/$argument1/config.rb" 
+  	indextext+="<h3>Compass</h3><ul><li>To rake assets, run <pre>compass compile --force</pre></li></ul>"
+  	;; esac
 
 case "${slots[@]}" in  *"doctrine"*)
 	echo 'Installing Doctrine ORM...'

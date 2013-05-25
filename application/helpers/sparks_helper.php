@@ -55,3 +55,101 @@ if ( ! function_exists('css_url'))
 		echo $CI->config->slash_item('base_url') . 'assets/css/' . $data;
 	}
 }
+
+// ------------------------------------------------------------------------
+
+/**
+ * template loader
+ *
+ * Loads template. Yep.
+ *
+ * @access	public
+ * @return	string
+ */
+if ( ! function_exists('template'))
+{
+	function template($template=null, $options=array())
+	{	
+		$CI =& get_instance();
+		$defaults = array(
+			'template' => $template,
+			'view' => null,
+		    'controller' => null,
+		    'data' => array()
+		  );
+		$arguments = array_merge($defaults, $options);
+		
+		if($arguments['controller']==null){
+			$arguments['controller'] = $CI->router->fetch_class(); 
+		}
+		if($arguments['view']==null){
+			$arguments['view'] = $CI->router->fetch_method(); 
+		}
+		if($arguments['template']==null){
+			$arguments['template'] = 'core';
+		}
+		echo $CI->load->view('templates/'.$arguments['template'], $arguments);
+	}
+}
+
+
+// ------------------------------------------------------------------------
+
+/**
+ * View loader
+ *
+ * Loads views. Yep.
+ *
+ * @access	public
+ * @return	string
+ */
+if ( ! function_exists('view'))
+{
+	function view($view, $options=array())
+	{	
+		$CI =& get_instance();
+		$defaults = array(
+		 	'view' => $view,
+		    'controller' => null,
+		    'data' => array()
+		  );
+		$arguments = array_merge($defaults, $options);
+		
+		if($arguments['controller']==null){
+			$arguments['controller'] = $CI->router->fetch_class(); 
+		}
+		$arguments['view']='index';
+		echo $CI->load->view($arguments['controller'].'/'.$arguments['view'], $arguments['data']);
+	}
+}
+
+
+
+// ------------------------------------------------------------------------
+
+/**
+ * Partials
+ *
+ * Load yourself a nice little partial.
+ *
+ * @access	public
+ * @return	string
+ */
+if ( ! function_exists('partial'))
+{
+	function partial($view, $options=array())
+	{	
+		$CI =& get_instance();
+		 $defaults = array(
+		    'controller' => null,
+		    'data' => null
+		  );
+		$arguments = array_merge($defaults, $options);
+		
+		if($arguments['controller']==null){
+			$arguments['controller'] = $CI->router->fetch_class(); 
+		}
+		echo $CI->load->view($arguments['controller'].'/partials/'.$view, $arguments['data']);
+	}
+}
+

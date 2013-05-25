@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Sparks extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,9 +19,9 @@ class Main extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('index');
+		template();
 	}
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file sparks.php */
+/* Location: ./application/controllers/sparks.php */
