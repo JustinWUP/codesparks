@@ -1,4 +1,25 @@
 <?php 
+
+// ------------------------------------------------------------------------
+
+/**
+ * External
+ *
+ * Returns true if it's an external url.
+ * Not working yet with protocol agnostic URLs.
+ *
+ * @access	public
+ * @return	string
+ */
+if ( ! function_exists('external'))
+{
+	function external($url)
+	{
+		return preg_match('%^((https\?://)|(www\.))([a-z0-9-].?)+(:[0-9]+)?(/.*)?$%i', $url);
+	}
+}
+
+
 // ------------------------------------------------------------------------
 
 /**
@@ -14,9 +35,35 @@ if ( ! function_exists('image_url'))
 	function image_url($data)
 	{
 		$CI =& get_instance();
-		echo $CI->config->slash_item('base_url') . 'assets/images/' . $data;
+		return $CI->config->slash_item('base_url') . 'assets/images/' . $data;
 	}
 }
+
+// ------------------------------------------------------------------------
+
+/**
+ * Image Render
+ *
+ * Actually render an image.
+ *
+ * @access	public
+ * @return	string
+ */
+if ( ! function_exists('image'))
+{
+	function image($data)
+	{
+		$CI =& get_instance();
+		if(external($data)){
+			echo '<img src="'. $data .'">';
+		}
+		else {
+			echo '<img src="'. image_url($data) .'">';
+		}
+	}
+}
+
+
 
 // ------------------------------------------------------------------------
 
@@ -33,9 +80,35 @@ if ( ! function_exists('script_url'))
 	function script_url($data)
 	{
 		$CI =& get_instance();
-		echo $CI->config->slash_item('base_url') . 'assets/js/' . $data;
+		return $CI->config->slash_item('base_url') . 'assets/js/' . $data;
 	}
 }
+
+// ------------------------------------------------------------------------
+
+/**
+ * Script embed
+ *
+ * Physically embed a script.
+ *
+ * @access	public
+ * @return	string
+ */
+
+if ( ! function_exists('script'))
+{
+	function script($data)
+	{ 
+		$CI =& get_instance();
+		if(external($data)){
+			echo '<script src="' .$data.'"></script>';
+		}
+		else{
+			echo '<script src="' . script_url($data) .'"></script>';
+		}
+	}
+}
+
 
 // ------------------------------------------------------------------------
 
@@ -52,9 +125,34 @@ if ( ! function_exists('css_url'))
 	function css_url($data)
 	{
 		$CI =& get_instance();
-		echo $CI->config->slash_item('base_url') . 'assets/css/' . $data;
+		return $CI->config->slash_item('base_url') . 'assets/css/' . $data;
 	}
 }
+
+// ------------------------------------------------------------------------
+
+/**
+ * CSS Embed
+ *
+ * Actually embed a CSS file.
+ *
+ * @access	public
+ * @return	string
+ */
+if ( ! function_exists('css'))
+{
+	function css($data)
+	{ 
+		$CI =& get_instance();
+		if(external($data)){
+			echo '<link rel="stylesheet" href="' .$data. '">';
+		}
+		else{
+			echo '<link rel="stylesheet" href="' .css_url($data). '">';
+		}
+	}
+}
+
 
 // ------------------------------------------------------------------------
 

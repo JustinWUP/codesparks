@@ -2,11 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-	<link rel="stylesheet" href="<?php css_url('style.css'); ?> "> 
-	<link rel="stylesheet" href="<?php css_url('fonts.css'); ?>"> 
-	<script src="<?php script_url('script.js'); ?>"></script>
+	<?php
+	 script("http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js");
+	 script("http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js");
+	 css('style.css'); 
+	 css('fonts.css'); 
+	 script('script.js');
+	 ?>
 	<title>New CodeSpark</title>
 </head>
 <body>
