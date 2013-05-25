@@ -68,11 +68,11 @@ if ( ! function_exists('css_url'))
  */
 if ( ! function_exists('template'))
 {
-	function template($template=null, $options=array())
+	function template($options=array())
 	{	
 		$CI =& get_instance();
 		$defaults = array(
-			'template' => $template,
+			'template' => null,
 			'view' => null,
 		    'controller' => null,
 		    'data' => array()
