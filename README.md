@@ -31,5 +31,6 @@ or
 
 ## DEPENDENCIES
 * Unix based OS or dev environment (Mac, Linux, CYGWIN) 
+* wget, curl (obviously)
 * Apache and Virtual Hosts turned on (Here's a decent article if you don't know how to do that - http://bit.ly/173lfH8)
 * Ruby/Rubygems (for Compass)
