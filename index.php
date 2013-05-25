@@ -18,7 +18,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	require '../environment.php';
+	require '/application/config/environment.php';
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
