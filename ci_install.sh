@@ -7,7 +7,7 @@
 
 argument1=$1  ###This is your incoming argument.
 argument2=$(whoami)
-slots=$3
+slots=$2
 escapestring=(echo '$1')
 
 echo 'Getting Sparks...'
