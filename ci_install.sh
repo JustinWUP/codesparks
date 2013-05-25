@@ -28,7 +28,6 @@ sudo -- sh -c "echo RewriteCond %{REQUEST_URI} !^/~$argument2/$argument1 >> ~/Si
 sudo -- sh -c "echo RewriteRule ^\(.*\)$ /~$argument2/$argument1/\$\1 [L] >> ~/Sites/.htaccess"
 
 echo 'Creating an .htaccess file for your project...'
-sudo -- sh -c "echo  >> ~/Sites/$argument1/.htaccess"
 sudo -- sh -c "echo \<IfModule mod_rewrite.c\> >> ~/Sites/$argument1/.htaccess"
 sudo -- sh -c "echo     Options +FollowSymLinks >> ~/Sites/$argument1/.htaccess"
 sudo -- sh -c "echo     RewriteEngine On >> ~/Sites/$argument1/.htaccess"
@@ -37,7 +36,9 @@ sudo -- sh -c "echo     RewriteCond %{REQUEST_FILENAME} !-f >> ~/Sites/$argument
 sudo -- sh -c "echo     RewriteCond %{REQUEST_FILENAME} !-d >> ~/Sites/$argument1/.htaccess"
 sudo -- sh -c "echo     RewriteRule ^/\(.*\)$ /index.php/$1 [L] >> ~/Sites/$argument1/.htaccess"
 sudo -- sh -c "echo \</IfModule\>  >> ~/Sites/$argument1/.htaccess"
-cat ~/Sites/$argument1/mod.txt >> .htaccess
+sudo -- sh -c "echo  >> ~/Sites/$argument1/.htaccess"
+cat ~/Sites/$argument1/mod.txt >> ~/Sites/$argument1/.htaccess
+rm ~/Sites/$argument1/mod.txt
 rm ~/Sites/$argument1/ci_install.sh
 
 #escape these arrow brackets
