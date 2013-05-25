@@ -1,6 +1,6 @@
 <h1>Welcome to CodeSparks.</h1>
 <hr>
-<h3>Some differences from stock CodeIgniter</h3>
+<h3>Tips and some differences from stock CodeIgniter</h3>
 <ul>
 	<li>Set your environment variable in application/config/environment.php and 
 		then use the corresponding environment folders in application/config for database and app setup.</li>
@@ -10,3 +10,15 @@
 		are included to reduce clutter in views.</li>
 	<li>Your header, footer and other partials get loaded into views by the decidedly more concise function
 		<pre>partial('partialname');</pre> </li>
+	<li>The helper functions are designed to be used with the php echo helper, like so.
+		<pre>&lt;?= link_to('url', image('image.jpg')); ?&gt;</pre></li>
+</ul>
+
+<h3>Get Started</h3>
+<ol>
+	<li>Delete this index.php</li>
+	<li>Create yourself a view folder and controller</li>
+	<li>Change default controller in routes.php to the controller you want</li>
+</ol>
+
+
