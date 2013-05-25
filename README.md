@@ -15,6 +15,7 @@ It features:
 Coming maybe:
 * Scaffold generator
 * More mixins (gimme ideas)
+* Documentation on the helpers, scaffolding
 
 ## INSTALLATION
 
