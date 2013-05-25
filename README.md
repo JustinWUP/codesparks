@@ -20,6 +20,7 @@ After the testsite parameter, add mixin names with comma separated values.
 So far, I have Compass (SASS) and Doctrine (ORM) but please suggest other things that are valuable that you want to use.
 
 Enter mixin name lowercase in the curl script
+
 i.e.
 
     curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite compass
