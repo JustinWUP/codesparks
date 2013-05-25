@@ -6,14 +6,14 @@ CodeSparks
 CodeSparks is the fastest way I can think of to setup a working CodeIgniter environment.
 
 It features:
-* Neat template features like assets folders and headers/footers
-* Some helper functions I use
+* Neat template features like preinstalled assets folders, core headers/footers, view/scaffolded organization
+* Some helper functions I use for loading URLs, partials and views.
 * Environment configurability
 * Automated Apache set up
 * Ability to select mixins that you might find useful
 
 Coming maybe:
-* Scaffolding
+* Scaffold generator
 * More mixins (gimme ideas)
 
 ## INSTALLATION
