@@ -80,6 +80,7 @@ case "${slots[@]}" in  *"doctrine"*)
 	echo 'Installing Doctrine ORM...'
 	mkdir ~/Sites/$argument1/tmp
 	wget http://www.doctrine-project.org/downloads/DoctrineORM-2.2.1-full.tar.gz -P ~/Sites/$argument1/tmp
+	tar xfz DoctrineORM-2.2.1-full.tar.gz
 	mv ~/Sites/$argument1/DoctrineORM-2.2.1/Doctrine ~/Sites/$argument1/application/libraries
 	rm  -rf ~/Sites/$argument1/tmp
 	perl -pi -e "s/$autoload['libraries'] = array('database');/$autoload['libraries'] = array('database', 'doctrine');/g" ~/Sites/$argument1/application/config/autoload.php
