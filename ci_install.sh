@@ -80,6 +80,7 @@ case "${slots[@]}" in  *"doctrine"*)
 	echo 'Installing Doctrine ORM...'
 	mkdir ~/Sites/$argument1/tmp
 	wget http://www.doctrine-project.org/downloads/DoctrineORM-2.2.1-full.tar.gz -P ~/Sites/$argument1/tmp
+	cd ~/Sites/$argument1/tmp/
 	tar xfz ~/Sites/$argument1/tmp/DoctrineORM-2.2.1-full.tar.gz
 	mv ~/Sites/$argument1/tmp/DoctrineORM-2.2.1/Doctrine ~/Sites/$argument1/application/libraries
 	rm  -rf ~/Sites/$argument1/tmp
