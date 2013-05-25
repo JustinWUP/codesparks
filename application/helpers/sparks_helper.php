@@ -6,7 +6,6 @@
  * External
  *
  * Returns true if it's an external url.
- * Not working yet with protocol agnostic URLs.
  *
  * @access	public
  * @return	string
@@ -15,7 +14,7 @@ if ( ! function_exists('external'))
 {
 	function external($url)
 	{
-		return preg_match('%^((https\?://)|(www\.))([a-z0-9-].?)+(:[0-9]+)?(/.*)?$%i', $url);
+		return preg_match('%^((https?://)|(www\.))([a-z0-9-].?)+(:[0-9]+)?(/.*)?$%i', $url);
 	}
 }
 
@@ -55,10 +54,10 @@ if ( ! function_exists('image'))
 	{
 		$CI =& get_instance();
 		if(external($data)){
-			echo '<img src="'. $data .'">';
+			return '<img src="'. $data .'">';
 		}
 		else {
-			echo '<img src="'. image_url($data) .'">';
+			return '<img src="'. image_url($data) .'">';
 		}
 	}
 }
@@ -101,10 +100,10 @@ if ( ! function_exists('script'))
 	{ 
 		$CI =& get_instance();
 		if(external($data)){
-			echo '<script src="' .$data.'"></script>';
+			return '<script src="' .$data.'"></script>';
 		}
 		else{
-			echo '<script src="' . script_url($data) .'"></script>';
+			return '<script src="' . script_url($data) .'"></script>';
 		}
 	}
 }
@@ -145,11 +144,29 @@ if ( ! function_exists('css'))
 	{ 
 		$CI =& get_instance();
 		if(external($data)){
-			echo '<link rel="stylesheet" href="' .$data. '">';
+			return '<link rel="stylesheet" href="' .$data. '">';
 		}
 		else{
-			echo '<link rel="stylesheet" href="' .css_url($data). '">';
+			return '<link rel="stylesheet" href="' .css_url($data). '">';
 		}
+	}
+}
+
+// ------------------------------------------------------------------------
+
+/**
+ * Link_to
+ *
+ * Link to something.
+ *
+ * @access	public
+ * @return	string
+ */
+if ( ! function_exists('link_to'))
+{
+	function link_to($data, $link)
+	{ 
+		return '<a href="' .$data. '">'.$link.'</a>';
 	}
 }
 
@@ -216,7 +233,6 @@ if ( ! function_exists('view'))
 		if($arguments['controller']==null){
 			$arguments['controller'] = $CI->router->fetch_class(); 
 		}
-		
 		echo $CI->load->view($arguments['controller'].'/'.$arguments['view'], $arguments['data']);
 	}
 }
