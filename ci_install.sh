@@ -84,7 +84,10 @@ case "${slots[@]}" in  *"doctrine"*)
 	mv ~/Sites/$argument1/tmp/DoctrineORM-2.2.1/Doctrine ~/Sites/$argument1/application/libraries
 	rm  -rf ~/Sites/$argument1/tmp
 	perl -pi -e "s/'database'/'database', 'doctrine'/g" ~/Sites/$argument1/application/config/autoload.php
-	wget http://www.joelverhagen.com/attachments/blog/2011/05/setting-up-codeigniter-2-with-doctrine-2-the-right-way/Doctrine.php -P ~/Sites/$argument1/application/libraries
+	wget https://github.com/JustinWUP/cstools/raw/master/doctrine/Doctrine.php -P ~/Sites/$argument1/application/libraries
+	mkdir ~/Sites/$argument1/application/models/Mappings
+	mkdir ~/Sites/$argument1/application/models/Entities
+	mkdir ~/Sites/$argument1/application/models/Proxies
 	;; esac
 
 echo " (                                                           "
