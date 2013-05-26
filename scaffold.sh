@@ -21,6 +21,6 @@ echo "	{ " >> ./application/controllers/$argument1.php
 echo "		template();" >> ./application/controllers/$argument1.php
 echo "    }" >> ./application/controllers/$argument1.php
 echo "}  " >> ./application/controllers/$argument1.php
-echo 'Scaffold $b created!'
+echo 'Scaffold created!'
 
 ###END SCRIPT###
