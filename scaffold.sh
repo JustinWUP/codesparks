@@ -33,6 +33,11 @@ echo 'Scaffold created!'
 }
 
 case "${slots[@]}" in  *"setup"*)
+if grep -q '$sparked = true;' ./index.php ; then
+	echo 'This application has already been setup.'
+	exit 0
+fi;
+perl -pi -e "s/$sparked = false;/$sparked = true;/g" ./index.php
 rm ./application/controllers/sparks.php
 rm ./application/views/sparks/index.php
 perl -pi -e "s/'sparks'/'$argument1'/g" ./application/config/routes.php
