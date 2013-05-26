@@ -14,7 +14,7 @@ indextext=""
 echo 'Getting Sparks...'
 mkdir ~/Sites/$argument1 ###This is your command using the argument.
 git clone https://github.com/JustinWUP/codesparks.git  ~/Sites/$argument1 
-wget https://github.com/JustinWUP/cstools/raw/master/.gitignore ~/Sites/$argument1
+wget ~/Sites/$argument1 https://github.com/JustinWUP/cstools/raw/master/.gitignore
 
 echo 'Modifying your hosts file for your project...'
 sudo -- sh -c "echo  >> /etc/hosts"
