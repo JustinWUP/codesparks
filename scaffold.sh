@@ -42,12 +42,13 @@ fi;
 
 
 touch ./application/views/$argument1/$argument2.php
-
+perl -pi -e "s/} #end of file//g" ./application/controllers/$argument1.php
 echo " " >> ./application/controllers/$argument1.php
 echo "public function $argument2()" >> ./application/controllers/$argument1.php
 echo "	{ " >> ./application/controllers/$argument1.php
 echo "		template();" >> ./application/controllers/$argument1.php
 echo "    }" >> ./application/controllers/$argument1.php
+echo "} #end of file" >> ./application/controllers/$argument1.php
 }
 
 case "${slots[@]}" in  *"setup"*)
