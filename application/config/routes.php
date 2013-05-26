@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "sparks";
+$route['default_controller'] = 'sparks';
 $route['404_override'] = '';
 
 

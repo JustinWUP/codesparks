@@ -34,7 +34,7 @@ echo 'Scaffold created!'
 
 case "${slots[@]}" in  *"setup"*)
 rm ./application/controllers/sparks.php
-rm ./application/views/index.php
+rm ./application/views/sparks/index.php
 perl -pi -e "s/'sparks'/'$argument1'/g" ./application/config/routes.php
 scaffold
 ;; esac
