@@ -200,7 +200,7 @@ if (defined('ENVIRONMENT'))
  *
  */
 
-	$sparked = true; 
+	$sparked = false; 
 
 
 /*
