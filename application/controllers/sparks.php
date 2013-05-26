@@ -23,5 +23,3 @@ class Sparks extends CI_Controller {
 	}
 }
 
-/* End of file sparks.php */
-/* Location: ./application/controllers/sparks.php */
