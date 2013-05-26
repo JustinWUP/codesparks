@@ -25,6 +25,7 @@ echo " "  >> ./application/controllers/$argument1.php
 echo "class $B extends CI_Controller {" >> ./application/controllers/$argument1.php
 argument2='index'
 view
+echo "}  " >> ./application/controllers/$argument1.php
 }
 
 function view {
@@ -47,8 +48,6 @@ echo "public function $argument2()" >> ./application/controllers/$argument1.php
 echo "	{ " >> ./application/controllers/$argument1.php
 echo "		template();" >> ./application/controllers/$argument1.php
 echo "    }" >> ./application/controllers/$argument1.php
-echo "}  " >> ./application/controllers/$argument1.php
-
 }
 
 case "${slots[@]}" in  *"setup"*)
