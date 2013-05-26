@@ -30,7 +30,6 @@
 
 <h3>Get Started</h3>
 <ol>
-	<li>Delete this index.php</li>
-	<li>Create yourself a view folder and controller</li>
-	<li>Change default controller in routes.php to the controller you want</li>
+	<li>From application root in terminal, run ./scaffold.sh setup {new-scaffold-name}.</li>
+	<li>Make a site.</li>
 </ol>

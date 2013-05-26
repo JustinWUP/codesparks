@@ -8,6 +8,11 @@ slots=$1
 argument1=$2
 
 function scaffold {
+if [ -e ./application/controllers/$argument1.php ] ; then                                                            justinbean@Justins-MacBook-Pro
+	echo 'That scaffold already exists.'
+	exit 0
+fi
+
 for i in $argument1; do B=`echo "${i:0:1}" | tr a-z A-Z`${i:1}; done
 
 echo 'Generating scaffold...'
