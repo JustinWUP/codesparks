@@ -1,6 +1,6 @@
 ###BEGIN SCRIPT###
 
-###SCRIPT NAME:  ci_install.sh ###
+###SCRIPT NAME:  cs_install.sh ###
 
 #!/bin/bash
 
@@ -13,7 +13,8 @@ indextext=""
 
 echo 'Getting Sparks...'
 mkdir ~/Sites/$argument1 ###This is your command using the argument.
-git clone https://github.com/JustinWUP/citemplate.git  ~/Sites/$argument1 
+git clone https://github.com/JustinWUP/codesparks.git  ~/Sites/$argument1 
+wget https://github.com/JustinWUP/cstools/raw/master/.gitignore ~/Sites/$argument1
 
 echo 'Modifying your hosts file for your project...'
 sudo -- sh -c "echo  >> /etc/hosts"
@@ -41,7 +42,7 @@ sudo -- sh -c "echo  >> ~/Sites/$argument1/.htaccess"
 sudo chmod 777 ~/Sites/$argument1/.htaccess
 cat ~/Sites/$argument1/mod.txt >> ~/Sites/$argument1/.htaccess
 rm ~/Sites/$argument1/mod.txt
-rm ~/Sites/$argument1/ci_install.sh
+rm ~/Sites/$argument1/cs_install.sh
 
 #escape these arrow brackets
 echo 'Setting up a VirtualHost...'
