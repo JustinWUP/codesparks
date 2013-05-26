@@ -23,7 +23,7 @@ Coming maybe:
 ### To install vanilla Sparks
 Run this at your terminal (where testsite is the folder to install the domain)
 
-    curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite
+    curl -L  https://github.com/JustinWUP/codesparks/raw/master/cs_install.sh | sh -s testsite
 
 Your site will be at ~/Sites/testsite and online at testsite.spark
 
@@ -33,11 +33,11 @@ After the testsite parameter, add mixin names lowercase, comma separated.
 
 i.e.
 
-    curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite compass
+    curl -L  https://github.com/JustinWUP/codesparks/raw/master/cs_install.sh | sh -s testsite compass
 
 or
 
-    curl -L  https://github.com/JustinWUP/citemplate/raw/master/ci_install.sh | sh -s testsite compass,doctrine
+    curl -L  https://github.com/JustinWUP/codesparks/raw/master/cs_install.sh | sh -s testsite compass,doctrine
 
 Mixins installers will download/setup everything you need for those particular tools via the curl script.
 
