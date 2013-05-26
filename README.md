@@ -64,6 +64,12 @@ This deletes stock controller, index.php, create new scaffold and set default co
 Where 'scaffold-name' is the name of the view and controller you want to generate, from project root run:
 
     ./scaffold.sh generate scaffold-name 
+
+#### Generating additional views for existing controllers
+
+Where 'controller-name' is the name of your existing controller and new-view-name is your new view, from project root run:
+
+    ./scaffold.sh generate controller-name new-view-name 
     
 More features coming one day including probably a migration generator for Doctrine.
 

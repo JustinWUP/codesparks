@@ -28,6 +28,12 @@ view
 }
 
 function view {
+
+if [ ! -e ./application/controllers/$argument1.php ] ; then                                                         
+	echo $argument1 'is not an existing controller.'
+	exit 0
+fi
+
 if grep -q "public function $argument2" ./application/controllers/$argument1.php ; then
 	echo 'This view already exists.'
 	exit 0
