@@ -18,7 +18,7 @@ Coming maybe:
 * More mixins (gimme ideas)
 * Documentation on the helpers, scaffolding
 
-## INSTALLATION
+## Installation
 
 ### To install vanilla Sparks
 Run this at your terminal (where testsite is the folder to install the domain)
@@ -40,6 +40,8 @@ or
     curl -L  https://github.com/JustinWUP/codesparks/raw/master/cs_install.sh | sh -s testsite compass,doctrine
 
 Mixins installers will download/setup everything you need for those particular tools via the curl script.
+
+## Other stuff
 
 ### Available mixins
 So far, I have:
