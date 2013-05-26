@@ -51,12 +51,21 @@ So far, I have:
 
 Please suggest other things that are valuable that you want to use.
 
-### Scaffolding
+### The scaffold tool
+
+#### Initial setup
+
+    ./scaffold.sh setup scaffold-name 
+
+This deletes stock controller, index.php, create new scaffold and set default controller to the one you just made. 
+
+#### Generating other scaffolds
+
 Where 'scaffold-name' is the name of the view and controller you want to generate, from project root run:
 
-    ./scaffold.sh scaffold-name 
+    ./scaffold.sh generate scaffold-name 
     
-More features coming one day.
+More features coming one day including probably a migration generator for Doctrine.
 
 ### Dependencies
 * Unix based OS or dev environment (Mac, Linux, CYGWIN) 
