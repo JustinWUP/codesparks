@@ -49,6 +49,13 @@ So far, I have:
 
 Please suggest other things that are valuable that you want to use.
 
+### Scaffolding
+Where 'scaffold-name' is the name of the view and controller you want to generate, from project root run:
+
+    ./scaffold.sh scaffold-name 
+    
+More features coming one day.
+
 ### Dependencies
 * Unix based OS or dev environment (Mac, Linux, CYGWIN) 
 * wget, curl (obviously), perl, tar
