@@ -25,7 +25,6 @@ echo " "  >> ./application/controllers/$argument1.php
 echo "class $B extends CI_Controller {" >> ./application/controllers/$argument1.php
 argument2='index'
 view
-echo "}  " >> ./application/controllers/$argument1.php
 }
 
 function view {
@@ -40,11 +39,9 @@ if grep -q "public function $argument2" ./application/controllers/$argument1.php
 	exit 0
 fi;
 
-
 touch ./application/views/$argument1/$argument2.php
 perl -pi -e "s/} #end of file//g" ./application/controllers/$argument1.php
-echo " " >> ./application/controllers/$argument1.php
-echo "public function $argument2()" >> ./application/controllers/$argument1.php
+echo "    public function $argument2()" >> ./application/controllers/$argument1.php
 echo "	{ " >> ./application/controllers/$argument1.php
 echo "		template();" >> ./application/controllers/$argument1.php
 echo "    }" >> ./application/controllers/$argument1.php

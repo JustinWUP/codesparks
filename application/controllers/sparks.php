@@ -21,5 +21,5 @@ class Sparks extends CI_Controller {
 	{
 		template();
 	}
-}
 
+} #end of file
