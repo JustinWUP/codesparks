@@ -6,7 +6,6 @@
 	<?= script("http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js");?>
 	<?= script('script.js'); ?>
 	<?= css('style.css'); ?>
-	<?= css('style.css'); ?>
 	<?= css('fonts.css'); ?>
 	 
 	<title>New CodeSpark</title>
