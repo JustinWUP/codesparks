@@ -79,3 +79,7 @@ More features coming one day including probably a migration generator for Doctri
 * Apache and Virtual Hosts turned on (Here's a decent article if you don't know how to do that - http://bit.ly/173lfH8)
 * PHP and MySQL (unless you favor another DB)
 * Ruby/Rubygems (for Compass)
+
+
+### Notes
+I've heard this potentially conflicts with a MAMP or MAMP Pro installation so be warned.
