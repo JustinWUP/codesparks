@@ -164,9 +164,15 @@ if ( ! function_exists('css'))
  */
 if ( ! function_exists('link_to'))
 {
-	function link_to($data, $link)
+	function link_to($data, $link, $target=null)
 	{ 
-		return '<a href="' .$data. '">'.$link.'</a>';
+		if($target !=null){
+			$wherego="target='_".$target. "'";
+		}
+		else{
+			$wherego = null;
+		}
+		return '<a href="' .$data. '"'.$wherego .'>'.$link.'</a>';
 	}
 }
 
